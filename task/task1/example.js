@@ -1,5 +1,6 @@
-export const alphabet = 'abcdefghijklmnoprstuwxyzyzsssassss'.split('')
+export const alphabet = 'abcdefghijklmnoprstuwxyz'.split('')
 
-export function randomNumber(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
+//function to get random size of chunks
+export function randomChunkSize(minSize, maxSize) {
+    return Math.round(Math.random() * (maxSize - minSize) + minSize);
 }
