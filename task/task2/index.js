@@ -28,6 +28,4 @@ export function filterFn(array, callback) {
 
 //function like reduce method
 
-export function reduceFn(array, callback, initial) {
-  console.log('Hello World!');
-}
+export function reduceFn(array, callback, initial) {}
