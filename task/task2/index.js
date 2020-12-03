@@ -1,9 +1,5 @@
 import testArray from './example';
 
-function callback(value, index, array) {
-  return value >= 10;
-}
-
 //function like map method
 
 export function mapFn(array, callback) {
@@ -17,17 +13,31 @@ export function mapFn(array, callback) {
 //function like filter method
 
 export function filterFn(array, callback) {
-  const initialArray = [];
-  array.forEach((item, index, array) => {
-    if (callback(item, index, array)) {
-      initialArray.push(item);
+  const resultOfFilterFunction = [];
+  array.forEach((arrayElement, index, array) => {
+    if (callback(arrayElement, index, array)) {
+      resultOfFilterFunction.push(arrayElement);
     }
   });
-  return initialArray;
+  return resultOfFilterFunction;
 }
 
 //function like reduce method
 
-export function reduceFn(array, callback, initial) {
-  console.log('Hello World!');
+export function reduceFn(array, callback, initialValue) {
+  let accumulator = initialValue;
+  let i = 0;
+  if (initialValue === undefined) {
+    accumulator = array[0];
+    i = 1;
+  }
+  for (; i < array.length; i++) {
+    accumulator = callback(accumulator, array[i], i, array);
+  }
+  return accumulator;
+}
+
+//function like reduce right method;
+function reduceRightFn(array, callback, initial) {
+  console.log('123');
 }
