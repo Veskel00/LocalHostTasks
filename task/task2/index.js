@@ -58,4 +58,22 @@ export function reduceRightFn(array, callback, initialValue) {
 
 //function like every method
 
-function everyFn(array, callback) {}
+export function everyFn(array, callback) {
+  for (let index = 0; index < array.length; index++) {
+    if (!callback(array[index], index, array)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+//function like some method
+
+export function someFn(array, callback) {
+  for (let index = 0; index < array.length; index++) {
+    if (callback(array[index], index, array)) {
+      return true;
+    }
+  }
+  return false;
+}

@@ -8,43 +8,54 @@ const chunks = aggregateIntoChunks(alphabet);
 
 //Task 2
 
-//Tools to Test Functions in Task 2
+//Array to Test Functions from Task 2
 const arrayToTests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 //Functions from index.js-----------------------
 
 //Map Function
 
-function callbackToMapFunction(currentValue, index, array) {
-  return currentValue * 5;
-}
-
 import { mapFn } from './task/task2/index';
-const exampleMapFunction = mapFn(arrayToTests, callbackToMapFunction);
+const exampleMapFunction = mapFn(arrayToTests, function (value, index, array) {
+  return value * 5;
+});
 
 //FilterFunction
 
 import { filterFn } from './task/task2/index';
 
-function callbackToFilterFunction(value, index, array) {
-  return value > 7;
-}
-
-const exampleFilterFunction = filterFn(arrayToTests, callbackToFilterFunction);
+const exampleFilterFunction = filterFn(arrayToTests, function (value, index, array) {
+  return value < 5;
+});
 
 //ReduceFunction
+
 import { reduceFn } from './task/task2/index';
 
-const exampleReduceFunction = reduceFn(arrayToTests, function (a, b) {
-  return a + b;
+const exampleReduceFunction = reduceFn(arrayToTests, function (value, index, array) {
+  return value + index;
 });
 
 //ReduceRightFunction
 
 import { reduceRightFn } from './task/task2/index';
 
-const exampleReduceRightFunction = reduceRightFn(arrayToTests, function (a, b) {
-  return a + b;
+const exampleReduceRightFunction = reduceRightFn(arrayToTests, function (value, index, array) {
+  return value + index;
 });
 
 //EveryFunction
+
+import { everyFn } from './task/task2/index';
+
+const exampleEveryFunction = everyFn(arrayToTests, function (value, index, array) {
+  return value >= 1;
+});
+
+//someFn;
+
+import { someFn } from './task/task2/index';
+
+const exampleSomeFunction = someFn(arrayToTests, function (value, index, array) {
+  return value > 5 && index < 9;
+});
