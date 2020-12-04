@@ -9,7 +9,7 @@ const chunks = aggregateIntoChunks(alphabet);
 //Task 2
 
 //Tools to Test Functions in Task 2
-const arrayToTests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arrayToTests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 //Functions from index.js-----------------------
 
@@ -40,3 +40,11 @@ const exampleReduceFunction = reduceFn(arrayToTests, function (a, b) {
 });
 
 //ReduceRightFunction
+
+import { reduceRightFn } from './task/task2/index';
+
+const exampleReduceRightFunction = reduceRightFn(arrayToTests, function (a, b) {
+  return a + b;
+});
+
+//EveryFunction

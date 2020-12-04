@@ -38,6 +38,24 @@ export function reduceFn(array, callback, initialValue) {
 }
 
 //function like reduce right method;
-function reduceRightFn(array, callback, initial) {
-  console.log('123');
+export function reduceRightFn(array, callback, initialValue) {
+  let accumulator = initialValue;
+  let index = array[array.length - 1];
+  if (initialValue === undefined) {
+    accumulator = array[array.length - 1];
+    index = array.length - 2;
+    for (; index >= 0; index--) {
+      accumulator = callback(accumulator, array[index], index, array);
+    }
+    return accumulator;
+  } else {
+    array.forEach((item, index) => {
+      accumulator = callback(accumulator, item, index, array);
+    });
+    return accumulator;
+  }
 }
+
+//function like every method
+
+function everyFn(array, callback) {}
