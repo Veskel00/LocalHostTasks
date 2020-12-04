@@ -1,4 +1,4 @@
-export const alphabet = 'abcdefghijklmnoprstuwxyz'.split('');
+export const alphabet = 'abcdefghijklmnoprstuwxyzzcxzcz'.split('');
 
 //function to get random size of chunks
 export function randomChunkSize(minSize, maxSize) {
