@@ -8,7 +8,7 @@ export function findPhraseInArray(array, wordToSearch) {
   });
 
   if (arrayOfResults.length < 1) {
-    const result = array.find((wordLikeWordToSearch) => wordLikeWordToSearch.match(wordToSearch));
+    const result = array.find((wordLikeWordToSearch) => wordLikeWordToSearch.toLowerCase().match(wordToSearch.toLowerCase()));
     arrayOfResults.push([array.indexOf(result), result]);
   }
   if (arrayOfResults[0][0] > -1) {

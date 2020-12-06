@@ -9,12 +9,12 @@ const inputData = [
   'następny',
   'Poprzedni',
   'market',
-  'Uncja',
+  'widok',
   'obiektowy',
   'Jakub',
   'zmywać',
   'Czyścić',
-  'Jak',
+  'jak',
 ];
 
 export default inputData;

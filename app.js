@@ -66,6 +66,7 @@ const exampleSomeFunction = someFn(arrayToTests, function (value, index, array) 
 import inputData from './task/task4/example';
 import { findPhraseInArray } from './task/task4/index';
 
-const exampleFindPharseInArray = findPhraseInArray(inputData, 'Jak');
+const exampleFindPharseInArray = findPhraseInArray(inputData, 'ja');
+console.log(exampleFindPharseInArray);
 
 //Task 5
