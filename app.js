@@ -4,8 +4,6 @@ import { alphabet } from './task/task1/example';
 
 const chunks = aggregateIntoChunks(alphabet);
 
-//console.log(chunks);
-
 //Task 2
 
 //Array to Test Functions from Task 2
@@ -16,48 +14,38 @@ const arrayToTests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 //Map Function
 
 import { mapFn } from './task/task2/index';
-const exampleMapFunction = mapFn(arrayToTests, function (value, index, array) {
-  return value * 5;
-});
+const mapFunction = mapFn(arrayToTests, (value, index, array) => value * 5);
 
 //FilterFunction
 
 import { filterFn } from './task/task2/index';
 
-const exampleFilterFunction = filterFn(arrayToTests, function (value, index, array) {
-  return value < 5;
-});
+const filterFunction = filterFn(arrayToTests, (value, index, array) => value < 5);
 
 //ReduceFunction
 
 import { reduceFn } from './task/task2/index';
 
-const exampleReduceFunction = reduceFn(arrayToTests, function (value, index, array) {
-  return value + index;
-});
+const reduceFunction = reduceFn(arrayToTests, (value, index, array) => value + index);
 
 //ReduceRightFunction
 
 import { reduceRightFn } from './task/task2/index';
 
-const exampleReduceRightFunction = reduceRightFn(arrayToTests, function (value, index, array) {
-  return value + index;
-});
+const reduceRightFunction = reduceRightFn(arrayToTests, (value, index, array) => value - index);
 
 //EveryFunction
 
 import { everyFn } from './task/task2/index';
 
-const exampleEveryFunction = everyFn(arrayToTests, function (value, index, array) {
-  return value >= 1;
-});
+const everyFunction = everyFn(arrayToTests, (value, index, array) => value >= 1);
 
 //someFn;
 
 import { someFn } from './task/task2/index';
 
-const exampleSomeFunction = someFn(arrayToTests, function (value, index, array) {
-  return value > 5 && index < 9;
+const someFunction = someFn(arrayToTests, (value, index, array) => {
+  return value > 1 && index < 1;
 });
 
 //Task 3
@@ -66,7 +54,17 @@ const exampleSomeFunction = someFn(arrayToTests, function (value, index, array) 
 import inputData from './task/task4/example';
 import { findPhraseInArray } from './task/task4/index';
 
-const exampleFindPharseInArray = findPhraseInArray(inputData, 'ja');
-console.log(exampleFindPharseInArray);
+const findPharseInArray_ = findPhraseInArray(inputData, 'ja');
 
 //Task 5
+
+//first Array
+import { generateArrayWithRandomNumbers } from './task/task5/index';
+
+const generateArrayWithRandomNumbers_ = generateArrayWithRandomNumbers(10, 1, 10);
+
+//second Array
+
+import { generateArrayOfArrays } from './task/task5/index';
+
+const generateArrayOfArrays_ = generateArrayOfArrays(10, 10, 1, 10);

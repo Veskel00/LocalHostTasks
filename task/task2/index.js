@@ -70,8 +70,8 @@ export function everyFn(array, callback) {
 //function like some method
 
 export function someFn(array, callback) {
-  for (let index = 0; index < array.length; index++) {
-    if (callback(array[index], index, array)) {
+  for (let arrayElement of array) {
+    if (callback(arrayElement, array.indexOf(arrayElement), array)) {
       return true;
     }
   }
