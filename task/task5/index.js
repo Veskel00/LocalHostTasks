@@ -1,3 +1,18 @@
-function generateArrayWithRandomNumbers(howManyNumbers = 10, min = 1, max = 10) {}
+//function to get random size of numbers in array;
 
-function generateArrayOfArrays(howManyArrays = 10, howManyNumbers = 10, min = 1, max = 10) {}
+import randomSize from './example';
+
+//howManyNumber = ile indexow w tablicy, min,max - losowa liczba w poszczególnym indexie
+export function generateArrayWithRandomNumbers(howManyNumbers, min, max) {
+  const arrayWithRandomNumbers = Array.from({ length: howManyNumbers }, () => randomSize(min, max));
+  return arrayWithRandomNumbers;
+}
+
+export function generateArrayOfArrays(howManyArrays, howManyNumbers, min, max) {
+  const arrayOfResults = [];
+
+  for (let i = 0; i < howManyArrays; i++) {
+    arrayOfResults.push(Array.from({ length: howManyNumbers }, () => randomSize(min, max)));
+  }
+  return arrayOfResults;
+}
