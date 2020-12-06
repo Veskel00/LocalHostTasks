@@ -59,3 +59,13 @@ import { someFn } from './task/task2/index';
 const exampleSomeFunction = someFn(arrayToTests, function (value, index, array) {
   return value > 5 && index < 9;
 });
+
+//Task 3
+
+//Task 4
+import inputData from './task/task4/example';
+import { findPhraseInArray } from './task/task4/index';
+
+const exampleFindPharseInArray = findPhraseInArray(inputData, 'Jak');
+
+//Task 5

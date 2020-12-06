@@ -8,7 +8,6 @@ function filterWith(arr, filter) {
   if (filter.length <= 2) {
     return [];
   } else {
-    arr;
   }
 }
 
