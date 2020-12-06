@@ -3,4 +3,4 @@ function randomSize(minSize, maxSize) {
   return Math.round(Math.random() * (maxSize - minSize) + minSize);
 }
 
-//export default randomSize;
+export default randomSize;
