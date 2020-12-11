@@ -1,15 +1,28 @@
-import data from './example';
-
-function reducer(acc, cur) {
-  return { ...acc, [cur.id]: cur };
-}
-
-function filterWith(arr, filter) {
+export function filterWith(arr, filter) {
+  const result = [];
   if (filter.length <= 2) {
     return [];
   } else {
-    console.log('123');
+    arr.filter((objectsInArray) => {
+      const { _id, age, eyeColor, name, gender, company, email, phone, tags, friends } = objectsInArray;
+      for (const valueOfObjects in objectsInArray) {
+        if (objectsInArray[valueOfObjects] === filter) {
+          result.push(_id, age, eyeColor, name, gender, company, email, phone, tags, friends);
+        }
+      }
+      objectsInArray.friends.filter((friendObject) => {
+        for (const elementOfFriendObject in friendObject) {
+          if (friendObject[elementOfFriendObject] === filter) {
+            result.push(_id, age, eyeColor, name, gender, company, email, phone, tags, friends);
+          }
+        }
+      });
+      objectsInArray.tags.filter((itemInTags) => {
+        if (itemInTags === filter) {
+          result.push(_id, age, eyeColor, name, gender, company, email, phone, tags, friends);
+        }
+      });
+    });
   }
+  return result;
 }
-
-export default filterWith;
