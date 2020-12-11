@@ -38,7 +38,7 @@ const reduceRightFunction = reduceRightFn(arrayToTests, (value, index, array) =>
 
 import { everyFn } from './task/task2/index';
 
-const everyFunction = everyFn(arrayToTests, (value, index, array) => value >= 1);
+const everyFunction = everyFn(arrayToTests, (value, index, array) => value > 15);
 
 //someFn;
 
@@ -49,6 +49,12 @@ const someFunction = someFn(arrayToTests, (value, index, array) => {
 });
 
 //Task 3
+
+import data from './task/task3/example';
+import { filterWith } from './task/task3/index';
+
+const filterWithExample = filterWith(data, 'Delacruz Acevedo');
+console.log(filterWithExample);
 
 //Task 4
 import inputData from './task/task4/example';
