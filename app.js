@@ -53,8 +53,7 @@ const someFunction = someFn(arrayToTests, (value, index, array) => {
 import data from './task/task3/example';
 import { filterWith } from './task/task3/index';
 
-const filterWithExample = filterWith(data, 'Delacruz Acevedo');
-console.log(filterWithExample);
+const filterWithExample = filterWith(data, 'Ebony Jimenez');
 
 //Task 4
 import inputData from './task/task4/example';
