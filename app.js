@@ -73,3 +73,17 @@ const generateArrayWithRandomNumbers_ = generateArrayWithRandomNumbers(10, 1, 10
 import { generateArrayOfArrays } from './task/task5/index';
 
 const generateArrayOfArrays_ = generateArrayOfArrays(10, 10, 1, 10);
+
+//Task 6
+// DO ZROBIENIA! ------------------------------
+import generateHuman from './task/task6/index';
+
+const generateHuman_ = generateHuman();
+
+//task 7
+
+import { getMyAge } from './task/task7/index';
+
+const getMyAge_ = getMyAge('1900');
+
+//task 8
